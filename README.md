@@ -1,6 +1,6 @@
 # infra-tools
 
-Tooling to support [infra](https://github.com/JoshMcguigan/infra).
+Tooling to support [infra](https://github.com/JoshMcguigan/infra). See [this blog post](https://www.joshmcguigan.com/blog/low-cost-infrastructure-monitoring/) for some background.
 
 ### Contribution
 

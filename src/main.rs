@@ -40,8 +40,9 @@ fn main() {
         // if the system is healthy would be useful to ensure the monitoring solution
         // doesn't break.
         make_issue(&checks_with_results).unwrap();
+    } else {
+        println!("All checks completed. All services OK.");
     }
-    println!("All checks completed. All services OK.");
 }
 
 fn get_name_servers() -> Vec<NameServer> {

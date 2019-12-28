@@ -34,12 +34,14 @@ fn main() {
     let failed = checks_with_results.iter()
         .any(|(_check, result)| result.is_err());
     if failed {
+        println!("Outage detected - creating GitHub issue");
         // It may be worth hitting the github endpoint even if the tests pass, just
         // to check that the access is still working. Perhaps even a weekly issue
         // if the system is healthy would be useful to ensure the monitoring solution
         // doesn't break.
         make_issue(&checks_with_results).unwrap();
     }
+    println!("All checks completed. All services OK.");
 }
 
 fn get_name_servers() -> Vec<NameServer> {
